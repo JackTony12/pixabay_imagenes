@@ -1,0 +1,112 @@
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1vw;
+}
+
+.tarjetas-contenedor {
+  background-color: rgb(241, 241, 241);
+  padding: 1vw;
+  border-radius: 1vw;
+  transition: 0.3s ease;
+  &:hover {
+    box-shadow: 1px 1px 5px gray;
+  }
+}
+.imagen-principal {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+.userOwnerProfile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+}
+.userImage {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+.user-name {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  & h4 {
+    margin-left: 1vw;
+  }
+  &::after{
+    content:'Author';
+    position:absolute;
+    top:10px;
+    left:8px;
+    font-size: .7em;
+  }
+}
+
+.image-info-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 2vw;
+  > div {
+    width: 100%;
+  }
+  & span {
+    background-color: rgb(252, 108, 56);
+    height: 50%;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: white;
+  }
+}
+.icon-contenedor {
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px gray;
+}
+.image-title {
+  text-align: left;
+  margin: 0;
+  padding: 0 1vw;
+  border-radius: 1vw 1vw 0 0;
+}
+@media (width < 1000px) {
+  .image-info-contenedor {
+    > div {
+      display: flex;
+      justify-content: center;
+      padding: 1vw;
+    }
+  }
+}
+@media (width > 680px) and (width < 1080px) {
+  .image-info-contenedor {
+    > div {
+    font-size: 1.6vw;
+  }
+}
+}
+
+@media (width > 880px) and (width < 1080px) {
+  .image-info-contenedor {
+    font-size: 1vw;
+  }
+}
+
+
+@media (width > 1080px) {
+  .image-info-contenedor {
+    font-size: 1vw;
+  }
+}
